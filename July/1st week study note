@@ -15,3 +15,10 @@ jQuery는 JavaScript 기반의 라이브러리로, 웹 페이지의 개발을 �
 JSP (JavaServer Pages)는 Java 기반의 서버 사이드 스크립트 언어입니다. HTML 코드 안에 Java 코드를 삽입하여 동적인 웹 페이지를 생성할 수 있습니다. JSP는 Java 언어의 강력한 기능을 활용하여 웹 애플리케이션을 개발할 수 있습니다.
 
 이렇게 설명하면서 비전공자도 쉽게 이해할 수 있을 것입니다. 추가로 궁금한 점이 있으면 언제든지 물어보세요!
+
+7/5 오류잡기
+프로젝트 불러오기 : import
+jre lib 세팅 : build path에서 다시 잡아주기 https://coding-factory.tistory.com/6
+포트중복 : tomcat 8.5 server 에서 admin port 8005가아닌 다른걸로 해주기. 대중적이라 중복될 확률 높
+
+https://coding-factory.tistory.com/6 
