@@ -22,3 +22,48 @@ jre lib 세팅 : build path에서 다시 잡아주기 https://coding-factory.tis
 포트중복 : tomcat 8.5 server 에서 admin port 8005가아닌 다른걸로 해주기. 대중적이라 중복될 확률 높
 
 https://coding-factory.tistory.com/6 
+
+7/6 목요일 
+“ 처음에는 컴퓨터 과학과 이론을 배워라. 그리고는 프로그래밍 스타일을 익혀라. 그리고는 모두 잊어버려라. 그저 해킹하라. ”
+- George Carrette
+SIOD의 창시자, hack은 개발에 몰두하는 것을 말함
+”나는 항상 내가 되고 싶은 사람이 될 수 있다고 상상했다.
+- 크리스 브라운
+
+
+font : notokr
+
+MobaXterm 설치 & 사용방법
+👩‍💻html & xml, tag
+🔗https://inpa.tistory.com/entry/MobaXterm-%F0%9F%92%BD-%EB%AA%A8%EB%B0%94%EC%97%91%EC%8A%A4%ED%85%80-%EC%84%A4%EC%B9%98-%ED%95%9C%EA%B8%80%ED%99%94-SSH-%EC%A0%91%EC%86%8D-%EB%B0%A9%EB%B2%95-%F0%9F%92%AF-%EC%A0%95%EB%A6%AC
+🔗리눅스오 우분투  https://hanamon.kr/%EB%A6%AC%EB%88%85%EC%8A%A4%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B4%EA%B3%A0-%EC%9A%B0%EB%B6%84%ED%88%AC%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80/ 
+현존하는 최강의 SSH 접속툴
+SHH와 SFTP를 같이 쓰는 기능이 이 프로그램의 최대 장점. 편함. 
+
+
+
+＆nbsp; ＆amp; ＆lt; ＆gt; ＆quot;의 의미?
+🔗https://sensechef.com/957 
+&nbsp;
+” ” : 공백(스페이스 한 칸)을 의미
+nbsp는 Non-breaking Space의 약어==공백(Space) 이 기호를 일반적인 문자 조합과 구분하기 위해 앞에는 &, 뒤에 ;을 넣어 &nbsp;라 표기한다.
+그렇다면 왜 굳이 공백 문자를 웹 페이지의 특수 문자(HTML Special character code)로 만들어 따로 둬야 할까 ? 
+우리가 HTML 웹 페이지를 만들면 화일 내에 수 많은 공백이 존재한다. 웹 브라우저나 스크립트 엔진 등이 이를 처리하기 위해서는 중간에 여러 개의 공백이 있는 경우 1개만 남겨 두고 모두 제거한다.
+
+
+&lt;
+부등호(<)
+
+&gt;
+부등호(>)
+
+&amp;
+앰퍼샌드(&) 기호
+&quot;
+쌍따옴표(“)
+
+&#035;
+sharp(#)
+ 
+&#039;
+따옴표(‘)
