@@ -1,0 +1,131 @@
+#bj 1475 https://www.acmicpc.net/problem/1475
+
+# 수정
+
+n = int(input())  # room number
+digits_arr = [0] * 10  
+sets_required = 0  
+
+while n > 0:
+    digit = n % 10  # Extract the last digit 변수 
+    digits_arr[digit] += 1  
+    n //= 10  # Remove the last digit
+
+for i in range(10):
+    if i == 6 or i == 9:
+        continue
+    sets_required = max(sets_required, digits_arr[i])
+ 
+# 홀수나 짝수 모든 가능성의 경우 +1, 그리고 그 세트 수에서 6과 9의 개수를 반으로 나누어준다. 
+# why?  3세트 가능성이 3이면 5개가있다면 2.5, 반올림하려면 +1, 거기서 2를 나누면 필요한 세트수기 때문입니다. 
+sets_required = max(sets_required, (digits_arr[6] + digits_arr[9] + 1) // 2)
+
+print(sets_required)
+
+
+
+"""
+#man's 
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+count = 1
+
+n = str(input())
+for i in range(0,len(n)): # n의 길이만큼 반복
+    if int(n[i]) in a : # i 번째의 정수 a  가 있으면
+        a.remove(int(n[i])) # a.remove 가 있으면 사용 했으면 리스트에서 뺌. 
+        print(a)
+    else : # 6,9 중복 코드 캐치
+        try : # 6,9 세트에 있을때 
+            if int(n[i]) == 9:
+                a.remove(6)
+                print(a)
+            elif int(n[i]) == 6:
+                a.remove(9)
+                print(a)
+            else :
+                count+= 1 # 6이랑 9가 아닐시 세트 카운트 + 1 
+                a=[1, 2, 3, 4, 5, 6, 7, 8, 9] 
+                a.remove(int(n[i]))
+        except ValueError : #error 무시하고 실행 # 즉, 6,9를 쓰고 하나 더 써야할때 
+            count+=1 
+            a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            a.remove(int(n[i])) # 6, 9를 또 쓰는 것. 
+
+print(count)
+
+
+#yh
+
+from collections import Counter
+import math
+
+N = input()
+
+c = Counter(N)
+
+other, six_nine = 0, 0
+for k, v in c.items():
+    if '6' == k or '9' == k:
+        six_nine += v
+    else:
+        other = max(other, v)
+print(max(other, math.ceil((six_nine) / 2)))
+
+#bi's
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+    public static int[] arr = new int[10];
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String n = br.readLine();
+
+        for (int i = 0; i < n.length(); i++) {
+            int num = n.charAt(i) - '0';
+            arr[num]++;
+        }
+        int needNum = 0;
+        int needNine = 0;
+        int needSix = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > 0) {
+                if (i == 9) {
+                    needNine = arr[i];
+                } else if (i == 6) {
+                    needSix = arr[i];  
+                } else {
+                    needNum = Math.max(needNum, arr[i]);
+                }
+            }
+        }
+        int need = (int) Math.ceil((needNine + needSix) / 2.0);
+
+        int result = Math.max(need, needNum);
+        System.out.println(result);
+    }
+}
+
+"""
+yh
+문제 전부 풀어서 다시 올려드립니다..!
+0x02 : 최댓값
+ - 파이썬 : https://www.acmicpc.net/source/63153137
+ - C++ : https://www.acmicpc.net/source/63188185
+0x03 : 방번호
+ - 파이썬 : https://www.acmicpc.net/source/63155774
+ - C++ : https://www.acmicpc.net/source/63194893
+0x04 : 키로거
+ - C++ : https://www.acmicpc.net/source/63197221
+
+ 
+bi
+1: 최댓값(https://www.acmicpc.net/source/63170402)
+2: 방번호 풀이(https://www.acmicpc.net/source/63169988)
+3: 키로거(https://www.acmicpc.net/source/63170119)
+"""
+
+
+
