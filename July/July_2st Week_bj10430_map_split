@@ -2,9 +2,11 @@
 A,B,C = map(int,input().split()) #a,b,c 3개의 변수를 기본 구분 기호(" "공백 문자)를 사용하여 int 타입 입력 문자열 입력받고input() 하위 문자열로 분할.split().
 
 print((A+B)%C, ((A%C)+(B%C))%C, (A*B)%C, ((A%C)*(B%C))%C, sep='\n')
-# sep='\n'로 변수마다 줄 바꿔주는 것.
+# sep='\n'로 변수마다 줄 바꿔주는 것. sep= 파라미터로 문자열을 구분하는 기호를 입력할 수도 있고 아무것도 입력하지 않으면 공백을 기준으로 문자를 나눔. 
 # .split() -.split()은 프린트 입력했을때 -마다 분해하는것 
 # map (int, ~함수를 각각 적용 즉 3개 이상의 변수를 선언할 때) 
+
+
 """
 # Split a string using a custom delimiter
 numbers = "1-2-3-4-5"
