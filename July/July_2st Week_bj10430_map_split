@@ -1,9 +1,58 @@
-#풀이 1
-A,B,C = map(int,input().split())
+#bj10430_풀이 1
+A,B,C = map(int,input().split()) #a,b,c 3개의 변수를 기본 구분 기호(" "공백 문자)를 사용하여 int 타입 입력 문자열 입력받고input() 하위 문자열로 분할.split().
 
 print((A+B)%C, ((A%C)+(B%C))%C, (A*B)%C, ((A%C)*(B%C))%C, sep='\n')
 # sep='\n'로 변수마다 줄 바꿔주는 것.
+# .split() -.split()은 프린트 입력했을때 -마다 분해하는것 
+# map (int, ~함수를 각각 적용 즉 3개 이상의 변수를 선언할 때) 
+"""
+# Split a string using a custom delimiter
+numbers = "1-2-3-4-5"
+number_list = numbers.split('-')
+# Print the list of numbers
+print(number_list)
+산출:
+['1', '2', '3', '4', '5']
+이 경우 split() 메서드는 구분 기호가 하이픈('-')으로 설정된 숫자 문자열에서 호출됩니다. 결과 목록 number_list에는 문자열의 개별 숫자가 포함됩니다.
+"""
 
+# map 
+""" map 안쓸 시,  map() 함수를 사용하여 입력 값을 별도의 변수에 할당하지 않고 직접 정수로 변환 가능
+A, B, C = input().split()
+A = int(A)
+B = int(B)
+C = int(C)
+
+input().split() 표현식은 기본 구분 기호(공백 문자)를 사용하여 입력 문자열을 하위 문자열로 분할하고 map(int, ...)은 int() 함수를 적용
+각 하위 문자열에 정수로 변환
+그런 다음 결과 정수는 구조 분해 할당을 사용하여 변수 'A', 'B' 및 'C'로 풀림 
+In this code snippet, the input().split() expression splits the input string into substrings using the default delimiter (space character), 
+and map(int, ...) applies the int() function to each of those substrings, converting them to integers. 
+The resulting integers are then unpacked into variables A, B, and C using the destructuring assignment.
+
+
+<SEP> 
+name = "John"
+age = 30
+country = "USA"
+
+# Print the values with a custom separator
+print(name, age, country, sep=" - ")
+
+산출:
+Copy code
+John - 30 - USA
+
+Python에서 sep는 인쇄되는 값 사이에 사용할 구분 기호를 지정하는 print() 함수의 매개변수입니다. 
+기본적으로 sep는 공백 문자(' ')로 설정됩니다. 그러나 원하는 문자열 값이나 문자로 수정할 수 있습니다.
+sep 매개변수를 사용하면 여러 항목이 인쇄될 때 구분을 제어할 수 있습니다. 출력 형식을 사용자 지정하려는 경우 특히 유용합니다.
+위의 예usage에서 sep=" - "는 값 사이의 구분 기호로 하이픈과 공백(' - ')을 설정하는 데 사용됩니다. 
+sep 매개변수로 print() 함수를 호출하면 name, age 및 country 값을 지정된 구분 기호로 구분하여 인쇄합니다.
+임의의 문자열이나 문자를 sep 값으로 사용할 수 있습니다. 예를 들어 sep="|"은 세로 막대('|')를 구분 기호로 사용하고 
+sep=""는 구분 기호를 모두 제거하여 구분 기호 없이 값을 함께 연결합니다.
+sep 매개변수를 지정하지 않으면 공백 문자인 기본 구분 기호가 사용됩니다.
+
+"""
 
 #풀이 2
 def calculate_values(A, B, C):
