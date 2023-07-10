@@ -1,0 +1,23 @@
+#풀이 1
+A,B,C = map(int,input().split())
+
+print((A+B)%C, ((A%C)+(B%C))%C, (A*B)%C, ((A%C)*(B%C))%C, sep='\n')
+# sep='\n'로 변수마다 줄 바꿔주는 것.
+
+
+#풀이 2
+def calculate_values(A, B, C):
+    sum_mod = (A + B) % C
+    sum_mod_indiv = ((A % C) + (B % C)) % C
+    product_mod = (A * B) % C
+    product_mod_indiv = ((A % C) * (B % C)) % C
+    return sum_mod, sum_mod_indiv, product_mod, product_mod_indiv
+
+# Get input from the user
+A, B, C = map(int, input().split())
+
+# Calculate the values
+result = calculate_values(A, B, C)
+
+# Print the results
+print(*result)
