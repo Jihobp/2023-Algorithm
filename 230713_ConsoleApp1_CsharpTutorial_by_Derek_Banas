@@ -228,6 +228,111 @@ namespace ConsoleApplication3
                 }
             }
 
+// foreach cycles through every item in an array or collection
+            string randStr = "Here are some random characters";
+ 
+            foreach( char c in randStr)
+            {
+                Console.WriteLine(c);
+            }
+ 
+            // ---------- STRINGS ----------
+ 
+            // Escape Sequences : \' \" \\ \b \n \t
+ 
+            string sampString = "A bunch of random words";
+ 
+            // Check if empty
+            Console.WriteLine("Is empty " + String.IsNullOrEmpty(sampString));
+            Console.WriteLine("Is empty " + String.IsNullOrWhiteSpace(sampString));
+            Console.WriteLine("String Length " + sampString.Length);
+ 
+            // Find a string index (Starts with 0)
+            Console.WriteLine("Index of bunch " + sampString.IndexOf("bunch"));
+ 
+            // Get a substring
+            Console.WriteLine("2nd Word " + sampString.Substring(2, 6));
+ 
+            string sampString2 = "More random words";
+ 
+            // Are strings equal
+            Console.WriteLine("Strings equal " + sampString.Equals(sampString2));
+ 
+            // Compare strings
+            Console.WriteLine("Starts with A bunch " + sampString.StartsWith("A bunch"));
+            Console.WriteLine("Ends with words " + sampString.EndsWith("words"));
+ 
+            // Trim white space at beginning and end or (TrimEnd / TrimStart)
+            sampString = sampString.Trim();
+ 
+            // Replace words or characters
+            sampString = sampString.Replace("words", "characters");
+            Console.WriteLine(sampString);
+ 
+            // Remove starting at a defined index up to the second index
+            sampString = sampString.Remove(0,2);
+            Console.WriteLine(sampString);
+ 
+            // Join values in array and save to string
+            string[] names = new string[3] { "Matt", "Joe", "Paul" };
+            Console.WriteLine("Name List " + String.Join(", ", names));
+ 
+            // Formatting : Currency, Decimal Places, Before Decimals, Thousands Separator
+            string fmtStr = String.Format("{0:c} {1:00.00} {2:#.00} {3:0,0}", 1.56, 15.567, .56, 1000);
+ 
+            Console.WriteLine(fmtStr.ToString());
+ 
+            // ---------- STRINGBUILDER ----------
+            // Each time you create a string you actually create another string in memory
+            // StringBuilders are used when you want to be able to edit a string without creating new ones
+ 
+            StringBuilder sb = new StringBuilder();
+ 
+            // Append a string to the StringBuilder (AppendLine also adds a newline at the end)
+            sb.Append("This is the first sentence.");
+ 
+            // Append a formatted string
+            sb.AppendFormat("My name is {0} and I live in {1}", "Derek", "Pennsylvania");
+ 
+            // Clear the StringBuilder
+            // sb.Clear();
+ 
+            // Replaces every instance of the first with the second
+            sb.Replace("a", "e");
+ 
+            // Remove characters starting at the index and then up to the defined index
+            sb.Remove(5, 7);
+ 
+            // Out put everything
+            Console.WriteLine(sb.ToString());
+ 
+            // ---------- ARRAYS ----------
+            // Declare an array
+            int[] randNumArray;
+ 
+            // Declare the number of items an array can contain
+            int[] randArray = new int[5];
+ 
+            // Declare and initialize an array
+            int[] randArray2 = { 1, 2, 3, 4, 5 };
+ 
+            // Get array length
+            Console.WriteLine("Array Length " + randArray2.Length);
+ 
+            // Get item at index
+            Console.WriteLine("Item 0 " + randArray2[0]);
+ 
+            // Cycle through array
+            for (int i = 0; i < randArray2.Length; i++)
+            {
+                Console.WriteLine("{0} : {1}", i, randArray2[i]);
+            }
+ 
+            // Cycle with foreach
+            foreach (int num in randArray2)
+            {
+                Console.WriteLine(num);
+            }
         }
     }
 }
