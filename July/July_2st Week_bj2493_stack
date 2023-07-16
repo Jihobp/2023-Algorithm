@@ -4,6 +4,34 @@
 - 큐 : https://www.acmicpc.net/problem/18258
 - 덱 : https://www.acmicpc.net/problem/1021
 까지 하겠습니다. 본격적으로 알고리즘이 나오는 BFS 정도부터 한 강의에서 2, 3문제 푸는 방향으로 하려고 합니다...!
+
+
+조금 늦었습니다 ㅎ.ㅎ;; 푼 문제 올립니다..! 다른 분들도 내일 오전까지는 올려주세요...!
+
+- 스택 : http://boj.kr/0067efe2cd284e5e86d75520d5e21a04
+- 큐 : http://boj.kr/def118e2086648538f24955c64b04139
+
+스택의 위치데이터를 저장해야지 결괏값을 뽑아낼 수있다.
+//stack 
+N = int(input())
+top = list(map(int, input().split(' ')))
+
+stack, ans = [], []
+for i in range(0, N): //들오는 값을 뒤에서 하나씩 앞으로 가며 판단 4부터
+    while stack and top[-1 -i] > stack[-1][0]: //4 가지고 올때는 python stack 은 빈리스트가 있으면 true 판단되면
+//stack 이 이미 있고, top 리스트 값,과 stack 에서 제일 위에값을 비교한다는 뜻.
+//top이 stack의 젤 위에있는 값보다 크면  추가해주고, stack 에선 빼주고.
+//top보다 stack 이 커서 4를 넣고 끝냄.
+//top 7이 stack 4보다 크니까 4를 빼고 answer에 4를 넣음. 
+
+        ans.append((N - i, stack[-1][1]))
+        stack.pop()
+    stack.append((top[-1 -i], N - 1 - i)) //stack 에 하나씩 쌓는 방식. 
+real = [0 for _ in range(N)]
+
+for a in ans:
+    real[a[1]] = a[0] //real에서 값을 하나씩 뽑아서 
+print(' '.join(map(str, real))) //join 이 하나의 string으로 만들어주는데, 띄어쓰기가 만든 상태로 만들어줌.
 """
 
 
